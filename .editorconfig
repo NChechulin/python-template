@@ -10,3 +10,4 @@ insert_final_newline = true
 
 [*.py]
 profile = black
+max_line_length = 88
