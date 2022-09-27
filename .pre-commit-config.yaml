@@ -12,6 +12,44 @@ repos:
       - id: mixed-line-ending
   - repo: local
     hooks:
+      - id: fix-imports
+        name: fix-imports
+        description: Run isort import fixer
+        entry: poetry run isort
+        language: python
+        files: ".*.py$"
+        pass_filenames: true
+      - id: format-code
+        name: format-code
+        description: Run black formatter
+        entry: poetry run black
+        language: python
+        files: ".*.py$"
+        pass_filenames: true
+      - id: type-check
+        name: type-check
+        description: Run mypy static type checker
+        entry: poetry run mypy
+        language: python
+        files: ".*.py$"
+        pass_filenames: true
+      - id: bandit
+        name: bandit
+        entry: poetry run bandit
+        language: python
+        files: ".*.py$"
+        pass_filenames: true
+      - id: pylint
+        name: pylint
+        entry: poetry run pylint
+        language: python
+        files: ".*.py$"
+      - id: flake8
+        name: flake8
+        description: Run flake8 linter
+        entry: poetry run flake8
+        language: python
+        files: ".*.py$"
       - id: requirements
         name: requirements
         description: Export production requirements
@@ -24,17 +62,3 @@ repos:
         entry: poetry export --with dev -o requirements-dev.txt
         language: python
         pass_filenames: false
-      - id: fix-imports
-        name: fix-imports
-        description: Run isort import fixer
-        entry: poetry run isort
-        language: python
-        files: ".*.py$"
-        pass_filenames: true
-      - id: format-code
-        name: format code
-        description: Run black formatter
-        entry: poetry run black
-        language: python
-        files: ".*.py$"
-        pass_filenames: true
