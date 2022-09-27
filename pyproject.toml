@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "python-template"
+version = "0.1.0"
+description = ""
+authors = ["Nikolay Chechulin <nchechulin@protonmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.group.dev.dependencies]
+isort = "^5.10.1"
+black = {extras = ["ipynb"], version = "^22.8.0"}
+bandit = "^1.7.4"
+flake8 = "^5.0.4"
+mypy = "^0.971"
+pylint = "^2.15.3"
+pre-commit = "^2.20.0"
+flake8-pie = "^0.16.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
