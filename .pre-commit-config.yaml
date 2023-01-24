@@ -28,7 +28,7 @@ repos:
           - id: type-check
             name: type-check
             description: Run mypy static type checker
-            entry: poetry run mypy
+            entry: poetry run mypy --install-types --non-interactive
             language: python
             files: ".*.py$"
             pass_filenames: true
