@@ -10,13 +10,13 @@ readme = "README.md"
 python = "^3.10"
 
 [tool.poetry.group.dev.dependencies]
-isort = "^5.10.1"
-black = {extras = ["jupyter"], version = "^23.0.0"}
+isort = "^5.12.0"
+black = {extras = ["jupyter"], version = "^23.1.0"}
 bandit = "^1.7.4"
 flake8 = "^6.0.0"
-mypy = "^0.991"
-pre-commit = "^3.0.0"
-pep8-naming = "^0.13.2"
+mypy = "^1.0.0"
+pre-commit = "^3.0.4"
+pep8-naming = "^0.13.3"
 flake8-absolute-import = "^1.0.0.1"
 flake8-new-union-types = "^0.4.1"
 flake8-annotations-complexity = "^0.0.7"
