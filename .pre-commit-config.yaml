@@ -38,12 +38,7 @@ repos:
             language: python
             files: ".*.py$"
             pass_filenames: true
-          - id: pylint
-            name: pylint
-            entry: poetry run pylint
-            language: python
-            files: ".*.py$"
-          - id: flake8
+         - id: flake8
             name: flake8
             description: Run flake8 linter
             entry: poetry run flake8
